@@ -23,7 +23,8 @@ class TodoList extends Component {
     };
 
     //create new todo
-    createNewToDoItem = () => {
+    createNewToDoItem = (e) => {
+      e.preventDefault();
       this.setState(({ list, todo }) => ({
         list: [
             ...list,
@@ -78,17 +79,22 @@ class TodoList extends Component {
                         )}
                     </div>
                     <div>
+                      <form onSubmit={this.createNewToDoItem}>
                        <input 
                        placeholder="enter your first todo here" 
                        type="text" 
                        value={this.state.todo} 
                        onChange={this.handleInput} 
                        onKeyPress={this.handleKeyPress}
+                       required
                        />
-                       <button className="Todo-Add"
-                       onClick={this.createNewToDoItem}>
+                       <button className="Todo-Add"  type="submit"
+                
+                       >
                          Add Todo
                          </button>
+
+                         </form>
                     </div>
 
                 </div>
