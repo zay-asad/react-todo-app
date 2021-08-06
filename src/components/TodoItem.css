@@ -1,0 +1,34 @@
+.TodoItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.TodoItem-Text {
+    width: 80%;
+    background-color: rgb(160, 241, 210);
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px lightgrey;
+    padding: 12px;
+    margin-right: 10px;
+}
+
+.TodoItem-Delete {
+    width: 90px;
+    padding: 5px;
+    height: 40px;
+    cursor: pointer;
+    background: #cc0a3b;
+    border-radius: 5px;
+    color: white;
+    border: 5px solid black;
+    font-weight: 500;
+    font-size: 18px;
+    box-shadow: 0.5px 0.5px 1px 1px rgba(161, 6, 32, 0.548);
+    margin-right: 5px;
+}
+
+.TodoItem-Delete:hover {
+    background-color: rgb(97, 0, 0);
+}
