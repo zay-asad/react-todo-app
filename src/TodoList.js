@@ -24,6 +24,7 @@ class TodoList extends Component {
 
     //create new todo
     createNewToDoItem = (e) => {
+      //prevent submit
       e.preventDefault();
       this.setState(({ list, todo }) => ({
         list: [
@@ -81,7 +82,7 @@ class TodoList extends Component {
                     <div>
                       <form onSubmit={this.createNewToDoItem}>
                        <input 
-                       placeholder="enter your first todo here" 
+                       placeholder="Enter your first todo here..." 
                        type="text" 
                        value={this.state.todo} 
                        onChange={this.handleInput} 
